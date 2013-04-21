@@ -1,13 +1,13 @@
-{% include 'gotem/sprint-area/sprint-header.html' %}
+{% load objective_tags %}
 
-{% include 'gotem/sprint-area/objetive-list__controls.html' %}
+<header class="active-sprint">
+    <h1>#1 01/01/2001 nombre</h1>
+    <p>12/15</p>
+    <a href="">abrir</a>
+</header>
 
-<ul class="objective-list">
-    {% include 'gotem/sprint-area/objective-item.html' %}
-
-    {% include 'gotem/sprint-area/objective-item.html' %}
-
-    {% include 'gotem/sprint-area/objective-item.html' %}
-
-    {% include 'gotem/sprint-area/objective-item.html' %}
-</ul>
+<div class="objective-list__controls">
+	<a href="" class="objective-add__link">Agregar un ojetico</a>
+	{% objective_form %}
+</div>
+<ul class="objective-list"></ul>

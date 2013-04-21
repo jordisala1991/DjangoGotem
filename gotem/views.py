@@ -1,5 +1,23 @@
 from django.shortcuts import render
+from django.utils import simplejson as json
+from django.http import Http404, HttpResponse, HttpResponseBadRequest
+from models import Objective, ObjectiveForm
 
 def index(request):
-    context = {}
-    return render(request, 'gotem/index.html', context)
+    return render(request, 'gotem/index.html')
+
+def objective_list(request):
+    objectives = Objective.objects.all()
+    context = { 'objectives' : objectives }
+    return render(request, 'gotem/sprint-area/objective-list.html', context)
+
+def objective_new(request):
+    if request.is_ajax():
+        objective_form = ObjectiveForm(request.POST or None)
+        if objective_form.is_valid():
+            objective_form.save()
+            return HttpResponse(json.dumps('success'), mimetype="application/json")
+        else:
+            return HttpResponseBadRequest(json.dumps(objective_form.errors), mimetype="application/json")
+    else:
+        raise Http404
