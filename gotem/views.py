@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.utils import simplejson as json
 from django.http import Http404, HttpResponse, HttpResponseBadRequest
-from models import Objective
+from models import Objective, ObjectiveForm
 
 def index(request):
     return render(request, 'gotem/index.html')
