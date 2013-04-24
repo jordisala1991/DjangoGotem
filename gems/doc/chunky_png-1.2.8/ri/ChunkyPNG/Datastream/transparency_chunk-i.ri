@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"transparency_chunk:EFI"-ChunkyPNG::Datastream#transparency_chunk;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"FThe chunk containing the transparency information of the palette.;TI"-@return [ChunkyPNG::Chunk::Transparency];T:
+@file0FI"!lib/chunky_png/datastream.rb;T

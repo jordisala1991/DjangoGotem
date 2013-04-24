@@ -1,0 +1,14 @@
+/* NAV BANNER (.nav--banner)
+---------------------------------- */
+// .nav--banner extends .nav and centres the list, e.g.:
+//
+// <ul class="nav--banner">
+//     <li><a href=# class="nav__label">Home</a></li>
+//     <li><a href=# class="nav__label">About</a></li>
+//     <li><a href=# class="nav__label">Portfolio</a></li>
+//     <li><a href=# class="nav__label">Contact</a></li>
+// </ul>
+.nav--banner {
+    @extend .nav;
+    text-align: center;
+}

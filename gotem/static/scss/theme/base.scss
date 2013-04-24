@@ -1,0 +1,75 @@
+/* =1.1 - BASE TYPOGRAPHY
+------------------------------------------------------ */
+body {
+    color: $c-black;
+    font-family: $f-sans;
+    @include font($base-font-size);
+    line-height: $base-line-height;
+}
+    /* =1.1.1 - BLOCK ELEMENTS
+    ---------------------------------- */
+    h1,h2,h3,h4,h5,h6,p,ul,ol {
+        margin-top: 0;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: $f-serif;
+    }
+    h1,
+    .f-alpha {
+        color: $c-secondary;
+        @include font(24px);
+    }
+    h2,
+    .f-beta {
+        color: $c-main;
+        @include font(20px);
+    }
+    h3,
+    .f-gamma {
+        @include font(16px);
+    }
+    h4,
+    .f-delta {
+        @include font(12px);
+
+    }
+    h5,
+    .f-epsilon {
+
+    }
+    h6,
+    .f-zeta {
+
+    }
+    p {
+        
+    }
+
+    /* =1.1.3 - INLINE ELEMENTS
+    ---------------------------------- */
+    a {
+        //margin: -.5em;
+        //padding: .5em;
+        position: relative;
+        text-decoration: none;
+        @include transition(all 0.3s ease-out);
+
+        &:hover {
+            color: red;
+            text-decoration: underline;
+        }
+    }
+
+/* =1.2 - IMAGES
+------------------------------------------------------ */
+img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* =1.3 - TABLES
+------------------------------------------------------ */
+table tr:nth-child(even) {
+    background: rgba(0,0,0,0.1);
+}

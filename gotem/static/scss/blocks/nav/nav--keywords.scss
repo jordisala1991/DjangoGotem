@@ -1,0 +1,22 @@
+/* NAV KEYWORDS (.nav--keywords)
+---------------------------------- */
+// Make a list of keywords. Extends .nav, e.g.:
+//
+// <ul class="nav--keywords">
+//     <li><a href=# class="nav__label">keyword 1</a></li>
+//     <li><a href=# class="nav__label">keyword 2</a></li>
+//     <li><a href=# class="nav__label">keyword 3</a></li>
+//     <li><a href=# class="nav__label">keyword 4</a></li>
+// </ul>
+ .nav--keywords {
+    @extend .nav;
+
+    > li {
+        &:after {
+            content: ",\00a0";
+        }
+        &:last-child:after {
+            display: none;
+        }
+    }
+}

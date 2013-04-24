@@ -1,0 +1,24 @@
+/* NAV BANNER (.nav--banner)
+---------------------------------- */
+// Force a nav to occupy 100% of the available width of its parent. Extends
+// .nav, e.g.:
+//
+// <ul class="nav--fit">
+//     <li><a href=# class="nav__label">Home</a></li>
+//     <li><a href=# class="nav__label">About</a></li>
+//     <li><a href=# class="nav__label">Portfolio</a></li>
+//     <li><a href=# class="nav__label">Contact</a></li>
+// </ul>
+.nav--fit {
+    @extend .nav;
+    display: table;
+    width: 100%;
+
+    > li {
+        display: table-cell;
+    }
+    .nav__label {
+        display: block;
+        text-align: center;
+    }
+}

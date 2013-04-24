@@ -1,0 +1,46 @@
+/* =X.1 - HIDDING STUFF
+------------------------------------------------------ */
+%hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+// Hide only visually, but have it available for screenreaders: h5bp.com/v
+%visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+}
+
+// Extends the .visuallyhidden class to allow the element to be focusable
+// when navigated to via the keyboard: h5bp.com/p
+%focusable {
+    &:active,
+    &:focus {
+        @extend %visuallyhidden;
+        clip: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+        height: auto;
+}
+
+// Hide visually and from screenreaders, but maintain layout
+%invisible {
+    visibility: hidden;
+}
+
+
+/* =X.2 - IMAGE REPLACEMENT
+------------------------------------------------------ */
+%ir {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}

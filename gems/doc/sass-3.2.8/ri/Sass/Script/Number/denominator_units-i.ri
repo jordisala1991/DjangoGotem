@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"denominator_units:EFI"+Sass::Script::Number#denominator_units;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"6A list of units in the denominator of the number.;TI"<For example, `1px*em/in*cm` would return `["in", "cm"]`;TI"@return [Array<String>];T:
+@file0FI"lib/sass/script/number.rb;T

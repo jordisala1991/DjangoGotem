@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"	name:EFI""Sass::Tree::VariableNode#name;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"The name of the variable.;TI"@return [String];T:
+@file0FI"#lib/sass/tree/variable_node.rb;T

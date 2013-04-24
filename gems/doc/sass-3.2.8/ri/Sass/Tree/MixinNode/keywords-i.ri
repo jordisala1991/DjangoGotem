@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"keywords:EFI"#Sass::Tree::MixinNode#keywords;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"2A hash from keyword argument names to values.;TI"'@return [{String => Script::Node}];T:
+@file0FI" lib/sass/tree/mixin_node.rb;T

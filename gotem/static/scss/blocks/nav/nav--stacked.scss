@@ -1,0 +1,20 @@
+/* NAV STACKED (.nav--stacked)
+---------------------------------- */
+// .nav--stacked extends .nav and throws the list into vertical mode, e.g.:
+//
+// <ul class="nav--stacked">
+//     <li><a href=# class="nav__label">Home</a></li>
+//     <li><a href=# class="nav__label">About</a></li>
+//     <li><a href=# class="nav__label">Portfolio</a></li>
+//     <li><a href=# class="nav__label">Contact</a></li>
+// </ul>
+.nav--stacked {
+    @extend .nav;
+
+    > li {
+        display: list-item;
+    }
+    .nav__label {
+        display: block;
+    }
+}

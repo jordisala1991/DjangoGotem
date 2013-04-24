@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"document:EFI"&Gem::DependencyInstaller#document;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"BDocumentation types.  For use by the Gem.done_installing hook;T:
+@file0FI")lib/rubygems/dependency_installer.rb;T

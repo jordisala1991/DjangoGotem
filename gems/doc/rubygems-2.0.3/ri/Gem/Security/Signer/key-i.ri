@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"key:EFI"Gem::Security::Signer#key;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"0The private key for the signing certificate;T:
+@file0FI"$lib/rubygems/security/signer.rb;T

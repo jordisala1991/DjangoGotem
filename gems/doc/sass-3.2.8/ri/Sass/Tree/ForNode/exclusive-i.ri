@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"exclusive:EFI""Sass::Tree::ForNode#exclusive;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"=Whether to include `to` in the loop or stop just before.;TI"@return [Boolean];T:
+@file0FI"lib/sass/tree/for_node.rb;T

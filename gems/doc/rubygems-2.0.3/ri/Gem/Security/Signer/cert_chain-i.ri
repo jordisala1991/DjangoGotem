@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"cert_chain:EFI"%Gem::Security::Signer#cert_chain;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"LThe chain of certificates for signing including the signing certificate;T:
+@file0FI"$lib/rubygems/security/signer.rb;T

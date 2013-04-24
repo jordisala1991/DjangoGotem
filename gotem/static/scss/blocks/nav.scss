@@ -1,0 +1,29 @@
+/* =3.1 - NAV (.nav)
+------------------------------------------------------ */
+.nav {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    font-size: 0;
+
+    > li {
+        display: inline-block;
+        // IE7 inline-block hack 
+            *display: inline;
+            zoom: 1;
+        font-size: $base-font-size;
+        font-size: $base-font-size-rem;
+    }
+}
+.nav__label {
+    display: inline-block;
+        // IE7 inline-block hack 
+            *display: inline;
+            zoom: 1;
+    text-decoration: none;
+}
+
+@import "nav/nav--stacked";
+// @import "nav/nav--banner";
+// @import "nav/nav--fit";
+// @import "nav/nav--keywords";

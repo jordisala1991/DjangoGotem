@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"guarded:EFI"%Sass::Tree::VariableNode#guarded;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"@Whether this is a guarded variable assignment (`!default`).;TI"@return [Boolean];T:
+@file0FI"#lib/sass/tree/variable_node.rb;T

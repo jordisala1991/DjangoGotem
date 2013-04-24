@@ -1,0 +1,23 @@
+.users-list li {
+	@include background-image(linear-gradient(left top, #f9f9f9, #f1f1f1));
+	@include span-columns(24);
+	border-bottom: solid thin #ccc;
+	@extend %cf;
+	
+}
+.users-list li img {
+	float: left;
+	margin: 8px 0 8px 16px;
+	width: 50px;
+}
+.users-list li h2 {
+	font-family: $f-serif;
+	float: left;
+	color: $c-main;
+	margin: 24px 0 0 16px;	
+}
+
+.brand {
+	width: 150px;
+	margin: 0 auto;
+}

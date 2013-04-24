@@ -1,0 +1,165 @@
+*,
+*:before,
+*:after {
+    @include box-sizing(border-box);
+}
+
+
+
+    /* =2.1- PAGE LAYOUT
+    ------------------------------------------------------ */
+        /* =2.1.1 - CLEARFIX
+        ---------------------------------- */
+        %cf {
+            *zoom: 1; // IE6/7 support
+
+            &:before,
+            &:after {
+                content: " ";
+                display: table;
+            }
+            &:after {
+                clear: both;
+            }    
+        }
+
+
+    /* =2.2- PROTOTYPE LAYOUT
+    ------------------------------------------------------ */
+    body {
+        //@include container;
+    }
+    .sprints-area {
+        background: #f3f3f3;
+        @include span-columns(6);
+
+    }
+    .sprint-area {
+        //background: palegreen;
+        @include span-columns(12);
+    }
+    .users-area {
+        @include span-columns(6 omega);
+    }
+    .nav--stacked > li {
+        border-bottom: 1px solid #ccc;
+    }
+
+
+        /* =2.1.1 - SPRINTS AREA
+        ---------------------------------- */
+        .sprint-item {
+            @extend %cf;
+            @include background-image(linear-gradient(left top, #f9f9f9, #f1f1f1));
+
+        }
+
+            .sprint__number {
+                 @include font(24px);
+                 @include span-columns(2, 12);
+                 padding: 8px;
+                 text-align: center;
+            }
+            .sprint__title {
+                border: 1px solid;
+                border-width: 0 1px;
+                border-color:#ccc; 
+                 @include span-columns(4, 6);
+                 padding: 6px 12px;
+
+                 h3 {
+                    @include font(20px);
+                 }
+            }
+            .sprint__done {
+                 @include span-columns(1 omega, 6);
+                 @include font(20px);
+                 padding: 8px 0;
+            }
+
+        /* =2.1.2 - SPRINT AREA
+        ---------------------------------- */
+        .active-sprint {
+            height: 30px;
+            @extend %cf;
+            border-bottom: 1px solid;
+        }
+            .active-sprint__title {
+               @include span-columns(8, 12); 
+            }
+            .active-sprint__done {
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+                border: 1px solid;
+                border-width: 0 1px;
+               @include span-columns(2, 12); 
+            }
+            .active-sprint__add {
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+               @include span-columns(2 omega, 12); 
+            }
+
+        .objective-list__controls {
+            @extend %cf;
+            border-bottom: 1px solid;
+        }
+            .objective-add > p {
+                @include span-columns(12, 12); 
+                @extend %cf;
+
+                &:first-of-type {
+                    label {
+                        @include span-columns(2, 12);
+                    }
+                    input {
+                       @include span-columns(10 omega, 12); 
+                    }   
+                }
+            }
+
+        .objective__header {
+            border-bottom: 1px solid;
+            height: 40px;
+            @include span-columns(12, 12); 
+            @extend %cf;
+            
+            .objective__status {
+                height: 40px;
+                @include span-columns(2, 12); 
+            }
+            .objective__title {
+                border: 1px solid;
+                border-width: 0 1px;
+                height: 40px;
+                @include span-columns(6, 12); 
+            }
+            .objective__controls {
+                
+                @include span-columns(4 omega, 12); 
+            }
+            .objective__comments-count {
+                height: 40px;
+                border-right: 1px solid;
+                @include span-columns(2, 4);
+            }
+            .objective__expand {
+                height: 40px;
+                @include span-columns(2 omega, 4);
+            }
+        }
+    //     <div class="objective-list__controls">
+    // <a href="" class="objective-add__link">Agregar un ojetico</a>
+    // <div class="objective-add">
+    //     <label for="">Titulo: </label>
+    //     <input type="text" />
+    //     <label for="">Valor: </label>
+    //     <input type="radio">
+    //     <label for="">Objetivo: </label>
+    //     <input type="radio">
+    //     <a href="" class="add">Agregar</a>
+    // </div>
+// </div>
+

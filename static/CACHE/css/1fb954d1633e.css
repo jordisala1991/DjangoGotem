@@ -1,0 +1,345 @@
+/* ============== [ INDEX ] ==============
+
+0 - NORMALIZE
+
+1 - BASE STYLE
+    1.1 - BASE TYPOGRAPHY
+        1.1.1 - BLOCK ELEMENTS
+        1.1.3 - INLINE ELEMENTS
+    1.2- IMAGES
+    1.3 - TABLES
+
+2 - LAYOUT
+    2.1- PAGE LAYOUT
+
+3 - BLOCKS
+    3.1 - NAV (.nav)
+
+4 - HEADER MAIN (.header-main)
+    4.1 - BRAND (.brand)
+    4.2 - MAIN NAVIGATION (.nav-main)
+
+X - HELPERS
+    X.1 - HIDDING STUFF
+
+======================================== */
+/* =0 - NORMALIZE
+-------------------------------------------------------------------------- */
+/* =1 - BASE STYLE
+-------------------------------------------------------------------------- */
+/* =1.1 - BASE TYPOGRAPHY
+------------------------------------------------------ */
+body {
+  color: #333333;
+  font-family: "Asap", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 1.1667; }
+
+/* =1.1.1 - BLOCK ELEMENTS
+---------------------------------- */
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+  margin-top: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Rosario", Georgia, serif; }
+
+h1,
+.f-alpha {
+  color: #808e91;
+  font-size: 24px;
+  font-size: 1.5rem; }
+
+h2,
+.f-beta {
+  color: #47443c;
+  font-size: 20px;
+  font-size: 1.25rem; }
+
+h3,
+.f-gamma {
+  font-size: 16px;
+  font-size: 1rem; }
+
+h4,
+.f-delta {
+  font-size: 12px;
+  font-size: 0.75rem; }
+
+/* =1.1.3 - INLINE ELEMENTS
+---------------------------------- */
+a {
+  position: relative;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+  a:hover {
+    color: red;
+    text-decoration: underline; }
+
+/* =1.2 - IMAGES
+------------------------------------------------------ */
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto; }
+
+/* =1.3 - TABLES
+------------------------------------------------------ */
+table tr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.1); }
+
+/* =2 - LAYOUT
+-------------------------------------------------------------------------- */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* =2.1- PAGE LAYOUT
+------------------------------------------------------ */
+/* =2.1.1 - CLEARFIX
+---------------------------------- */
+.sprint-item, .active-sprint, .objective-list__controls, .objective-add > p, .objective__header, .users-list li {
+  *zoom: 1; }
+  .sprint-item:before, .active-sprint:before, .objective-list__controls:before, .objective-add > p:before, .objective__header:before, .users-list li:before, .sprint-item:after, .active-sprint:after, .objective-list__controls:after, .objective-add > p:after, .objective__header:after, .users-list li:after {
+    content: " ";
+    display: table; }
+  .sprint-item:after, .active-sprint:after, .objective-list__controls:after, .objective-add > p:after, .objective__header:after, .users-list li:after {
+    clear: both; }
+
+/* =2.2- PROTOTYPE LAYOUT
+------------------------------------------------------ */
+.sprints-area {
+  background: #f3f3f3;
+  width: 24.36975%;
+  float: left;
+  margin-right: 0.84034%;
+  display: inline; }
+
+.sprint-area {
+  width: 49.57983%;
+  float: left;
+  margin-right: 0.84034%;
+  display: inline; }
+
+.users-area {
+  width: 24.36975%;
+  float: right;
+  margin-right: 0;
+  #margin-left: -1em;
+  display: inline; }
+
+.nav--stacked > li {
+  border-bottom: 1px solid #ccc; }
+
+/* =2.1.1 - SPRINTS AREA
+---------------------------------- */
+.sprint-item {
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #f9f9f9), color-stop(100%, #f1f1f1));
+  background-image: -webkit-linear-gradient(left top, #f9f9f9, #f1f1f1);
+  background-image: -moz-linear-gradient(left top, #f9f9f9, #f1f1f1);
+  background-image: -o-linear-gradient(left top, #f9f9f9, #f1f1f1);
+  background-image: linear-gradient(left top, #f9f9f9, #f1f1f1); }
+
+.sprint__number {
+  font-size: 24px;
+  font-size: 1.5rem;
+  width: 15.25424%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+  padding: 8px;
+  text-align: center; }
+
+.sprint__title {
+  border: 1px solid;
+  border-width: 0 1px;
+  border-color: #ccc;
+  width: 65.51724%;
+  float: left;
+  margin-right: 3.44828%;
+  display: inline;
+  padding: 6px 12px; }
+  .sprint__title h3 {
+    font-size: 20px;
+    font-size: 1.25rem; }
+
+.sprint__done {
+  width: 13.7931%;
+  float: right;
+  margin-right: 0;
+  #margin-left: -1em;
+  display: inline;
+  font-size: 20px;
+  font-size: 1.25rem;
+  padding: 8px 0; }
+
+/* =2.1.2 - SPRINT AREA
+---------------------------------- */
+.active-sprint {
+  height: 30px;
+  border-bottom: 1px solid; }
+
+.active-sprint__title {
+  width: 66.10169%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline; }
+
+.active-sprint__done {
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border: 1px solid;
+  border-width: 0 1px;
+  width: 15.25424%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline; }
+
+.active-sprint__add {
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  width: 15.25424%;
+  float: right;
+  margin-right: 0;
+  #margin-left: -1em;
+  display: inline; }
+
+.objective-list__controls {
+  border-bottom: 1px solid; }
+
+.objective-add > p {
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline; }
+  .objective-add > p:first-of-type label {
+    width: 15.25424%;
+    float: left;
+    margin-right: 1.69492%;
+    display: inline; }
+  .objective-add > p:first-of-type input {
+    width: 83.05085%;
+    float: right;
+    margin-right: 0;
+    #margin-left: -1em;
+    display: inline; }
+
+.objective__header {
+  border-bottom: 1px solid;
+  height: 40px;
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline; }
+  .objective__header .objective__status {
+    height: 40px;
+    width: 15.25424%;
+    float: left;
+    margin-right: 1.69492%;
+    display: inline; }
+  .objective__header .objective__title {
+    border: 1px solid;
+    border-width: 0 1px;
+    height: 40px;
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+    display: inline; }
+  .objective__header .objective__controls {
+    width: 32.20339%;
+    float: right;
+    margin-right: 0;
+    #margin-left: -1em;
+    display: inline; }
+  .objective__header .objective__comments-count {
+    height: 40px;
+    border-right: 1px solid;
+    width: 47.36842%;
+    float: left;
+    margin-right: 5.26316%;
+    display: inline; }
+  .objective__header .objective__expand {
+    height: 40px;
+    width: 47.36842%;
+    float: right;
+    margin-right: 0;
+    #margin-left: -1em;
+    display: inline; }
+
+/* =3 - BLOCKS
+-------------------------------------------------------------------------- */
+/* =3.1 - NAV (.nav)
+------------------------------------------------------ */
+.nav, .nav--stacked {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  font-size: 0; }
+  .nav > li, .nav--stacked > li {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    font-size: 13px;
+    font-size: 0.72222rem; }
+
+.nav__label {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  text-decoration: none; }
+
+/* NAV STACKED (.nav--stacked)
+---------------------------------- */
+.nav--stacked > li {
+  display: list-item; }
+.nav--stacked .nav__label {
+  display: block; }
+
+/* =4 - HEADER (.header-main)
+-------------------------------------------------------------------------- */
+/* =4.1 - BRAND (.brand)
+------------------------------------------------------ */
+/* =4.2 - MAIN NAVIGATION (.nav_main)
+------------------------------------------------------ */
+/* =X - HELPERS
+-------------------------------------------------------------------------- */
+/* =4.1 - BRAND (.brand)
+------------------------------------------------------ */
+/* =4.2 - MAIN NAVIGATION (.nav_main)
+------------------------------------------------------ */
+/* =X - USERS
+-------------------------------------------------------------------------- */
+.users-list li {
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #f9f9f9), color-stop(100%, #f1f1f1));
+  background-image: -webkit-linear-gradient(left top, #f9f9f9, #f1f1f1);
+  background-image: -moz-linear-gradient(left top, #f9f9f9, #f1f1f1);
+  background-image: -o-linear-gradient(left top, #f9f9f9, #f1f1f1);
+  background-image: linear-gradient(left top, #f9f9f9, #f1f1f1);
+  width: 100%;
+  float: left;
+  margin-right: 0.84034%;
+  display: inline;
+  border-bottom: solid thin #ccc; }
+
+.users-list li img {
+  float: left;
+  margin: 8px 0 8px 16px;
+  width: 50px; }
+
+.users-list li h2 {
+  font-family: "Rosario", Georgia, serif;
+  float: left;
+  color: #47443c;
+  margin: 24px 0 0 16px; }
+
+.brand {
+  width: 150px;
+  margin: 0 auto; }

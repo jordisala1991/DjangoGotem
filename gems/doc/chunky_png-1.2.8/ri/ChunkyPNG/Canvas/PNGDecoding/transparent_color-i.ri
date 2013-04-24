@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"transparent_color:EFI"5ChunkyPNG::Canvas::PNGDecoding#transparent_color;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"<The color to be replaced with fully transparent pixels.;T:
+@file0FI"*lib/chunky_png/canvas/png_decoding.rb;T

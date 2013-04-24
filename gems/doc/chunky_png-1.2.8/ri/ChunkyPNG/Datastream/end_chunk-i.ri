@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"end_chunk:EFI"$ChunkyPNG::Datastream#end_chunk;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"<The empty chunk that signals the end of this datastream;TI"'@return [ChunkyPNG::Chunk::Header];T:
+@file0FI"!lib/chunky_png/datastream.rb;T

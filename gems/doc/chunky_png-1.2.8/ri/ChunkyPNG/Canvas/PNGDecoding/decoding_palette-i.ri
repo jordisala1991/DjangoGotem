@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"decoding_palette:EFI"4ChunkyPNG::Canvas::PNGDecoding#decoding_palette;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"LThe palette that is used to decode the image, loading from the PLTE and;TI"OtRNS chunk from the PNG stream. For RGB(A) images, no palette is required.;TI"!@return [ChunkyPNG::Palette];T:
+@file0FI"*lib/chunky_png/canvas/png_decoding.rb;T

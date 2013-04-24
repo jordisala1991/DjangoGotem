@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"to:EFI"Sass::Tree::ForNode#to;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"-The parse tree for the final expression.;TI"@return [Script::Node];T:
+@file0FI"lib/sass/tree/for_node.rb;T

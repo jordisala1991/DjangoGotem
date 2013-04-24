@@ -1,0 +1,53 @@
+// ============== [ INDEX ] ==============
+//
+//  1 - Vertical Rythm
+//      1.1 - Vertical Rythm magic number function
+//      1.2 - Vertical Rythm (rem + px)
+//
+//  2 - Typography
+//      2.1 - Fonts Sizes (rem + px)
+//      2.2 - Line height
+//
+// ========================================
+
+
+// =1 - Vertical Rythm    
+// -------------------------------------------------------------------------- */
+    // =1.1 - Vertical Rythm magic number function
+    // ------------------------------------------------------ */
+    @function vertical-rythm-unit() {
+        $rythm: ($base-font-size/1px) * $base-line-height;
+        @return floor($rythm);
+    }
+
+    // =1.2 - Vertical Rythm (rem + px)
+    // ------------------------------------------------------ */
+    @mixin vrm($multip, $property:margin-bottom) {
+        #{$property}: vertical-rythm-unit() * $multip+0px;
+        #{$property}: ((vertical-rythm-unit() * $multip+0px)/16px)+0rem;
+    }
+
+
+// =2 - Typography
+// -------------------------------------------------------------------------- */
+    // =2.1 - Fonts Sizes (rem + px)
+    // ------------------------------------------------------ */
+    @mixin font($size) {
+      font-size: $size;
+      font-size: $size/16px+0rem;
+    }
+
+    // =2.2 - Line height
+    // ------------------------------------------------------ */
+    @mixin line-h($size, $multip: 1) {
+        line-height: (vertical-rythm-unit() * $multip) / ($size/1px);
+    }
+
+
+    @mixin position($type, $top, $right, $bottom, $left) {
+        position: $type;
+        top: $top;
+        right: $right;
+        bottom: $bottom;
+        left: $left;
+    }
