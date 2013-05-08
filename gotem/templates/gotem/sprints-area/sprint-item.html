@@ -1,0 +1,15 @@
+{% url 'show_sprint' sprint.id as sprint_url %}
+{% if sprint != selected_sprint %}
+<a href="{{ sprint_url }}" onclick="return load_sprint({{ sprint.id }});">
+{% endif %}
+    <div class="sprint-item">
+        <p class="sprint__number">1</p>
+        <hgroup class="sprint__title">
+            <h3>{{ sprint.start_date }}</h3>
+            <h4>{{ sprint.name }}</h4>
+        </hgroup>
+        <p class="sprint__done">12/15</p>
+    </div>
+{% if sprint != selected_sprint %}
+</a>
+{% endif %}

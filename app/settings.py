@@ -167,5 +167,6 @@ LOGGING = {
 os.environ['GEM_HOME'] = os.path.join(BASE_DIR, "gems")
 COMPRESS_PRECOMPILERS = (
     ('text/x-scss', 'sass --scss --compass {infile} {outfile}'),
+    ('text/coffeescript', 'coffee --compile --stdio'),
 )
 COMPRESS_ENABLED = True

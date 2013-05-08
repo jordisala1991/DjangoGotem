@@ -1,15 +1,5 @@
-{% for objective in objectives %}
-	<li class="objective">
-        <div><input type="checkbox"></div>
-        <h2>{{ objective.title }}</h2>
-        <div class="objective__controls">
-            <div class="objective__comments-count">Comentarios</div>
-            <div class="objective__expand">+</div>
-        </div>
-
-        <div class="objective__details">
-        <div class="objective__description"><p>{{ objective.description }}</p></div>
-        <div class="objective__comments">bloque comentarios</div>
-        </div>
-    </li>
-{% endfor %}
+<ul class="objective-list nav--stacked" id="objective-list">
+    {% for objective in objectives %}
+        {% include 'gotem/sprint-area/objective-item.html' %}
+    {% endfor %}
+</ul>

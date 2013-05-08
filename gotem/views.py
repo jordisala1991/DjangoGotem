@@ -1,25 +1,28 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.utils import simplejson as json
-from django.http import Http404, HttpResponse, HttpResponseBadRequest
-from models import Objective, ObjectiveForm
+from django.http import Http404, HttpResponseBadRequest
+from models import Objective, Sprint, ObjectiveForm
 
 def index(request):
-    return render(request, 'gotem/index.html')
+    
+    sprint = Sprint.objects.latest('id')
+    return show_sprint(request, sprint.id)
 
-def objective_list(request):
-    if request.is_ajax():
-        objectives = Objective.objects.all()
-        context = { 'objectives' : objectives }
-        return render(request, 'gotem/sprint-area/objective-list.html', context)
-    else:
-        raise Http404
+def show_sprint(request, sprint_id):
+    
+    sprint = get_object_or_404(Sprint, id=sprint_id)
+    objectives = Objective.objects.filter(sprint=sprint).order_by('-date')
+    form = ObjectiveForm(initial = { 'sprint' : sprint })
+    model = { 'sprint' : sprint, 'form' : form, 'objectives' : objectives }
+    return render(request, 'gotem/index.html', model)
 
 def objective_new(request):
+    
     if request.is_ajax():
         objective_form = ObjectiveForm(request.POST or None)
         if objective_form.is_valid():
-            objective_form.save()
-            return HttpResponse(json.dumps('success'), mimetype="application/json")
+            new_objective = objective_form.save()
+            return render(request, 'gotem/sprint-area/objective-item.html', { 'objective' : new_objective })
         else:
             return HttpResponseBadRequest(json.dumps(objective_form.errors), mimetype="application/json")
     else:

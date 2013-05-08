@@ -1,0 +1,9 @@
+<form action="/objective/new/" method="post" id="objective-form">
+    {% csrf_token %}
+    <label for="id_title">Name:</label>
+    {{ form.name }}
+    <label for="id_description">Description:</label>
+    {{ form.description }}
+    {{ form.sprint }}
+    <input type="submit" value="Submit"/>
+</form>
